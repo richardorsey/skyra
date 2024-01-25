@@ -792,12 +792,27 @@ table {
 .fa-moon:before {
 	content: "";
 	display: block;
+	position: relative;
+	top: 1px;
 	width: 14px;
 	height: 14px;
 	background-color: #ccc;
 	-webkit-mask: url(images/icons/icon-moon.svg) no-repeat center / contain;
 	mask: url(images/icons/icon-moon.svg) no-repeat center / contain;
-	/* background: url(images/icons/icon-moon.svg) 0 0/contain no-repeat; */
+	transition: all 0.3s ease 0s;
+}
+.fa-moon:before:hover {
+	
+	background-color: #000;
+
+}
+
+.book.color-theme-2.fa-moon:before{
+	background-color: #3b3f54;
+}
+
+.book.color-theme-2.fa-moon:before:hover {
+	background-color: #FFF;
 }
 
 .fa-plus-circle:before {
