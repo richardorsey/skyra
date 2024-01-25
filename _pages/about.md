@@ -1,9 +1,9 @@
 ---
-title: About
-author: Tao He
-date: 2022-02-04
-category: Jekyll
+title: Skyra
+author: Kozak Ivan
+date: 2024-01-25
+category: New
 layout: post
 ---
 
-This is an about page.
+Hi, there!
