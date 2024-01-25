@@ -795,8 +795,8 @@ table {
 	width: 14px;
 	height: 14px;
 	background-color: #ccc;
-	-webkit-mask: url(images/icons/icon-moon.svg) no-repeat center;
-	mask: url(images/icons/icon-moon.svg) no-repeat center;
+	-webkit-mask: url(images/icons/icon-moon.svg) no-repeat center / contain;
+	mask: url(images/icons/icon-moon.svg) no-repeat center / contain;
 	/* background: url(images/icons/icon-moon.svg) 0 0/contain no-repeat; */
 }
 
