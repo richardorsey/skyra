@@ -788,6 +788,13 @@ table {
 .fa-chevron-right:before {
 	content: "\f054"
 }
+.fa-moon:before {
+	content: "";
+	display:block;
+	width: 14px;
+	height: 14px;
+	background: url(images/icons/icon-moon.svg) 0 0/contain no-repeat;
+}
 
 .fa-plus-circle:before {
 	content: "\f055"
