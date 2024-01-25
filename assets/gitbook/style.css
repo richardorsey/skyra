@@ -799,7 +799,7 @@ table {
 	background-color: #ccc;
 	-webkit-mask: url(images/icons/icon-moon.svg) no-repeat center / contain;
 	mask: url(images/icons/icon-moon.svg) no-repeat center / contain;
-	transition: all 0.3s ease 0s;
+	transition: all 0.1s ease 0s;
 }
 .fa-moon:hover::before {
 	
