@@ -2,7 +2,6 @@
 layout: home
 title: Testing Skyra Theme
 permalink: /
-cover: https://sighingnow.github.io/jekyll-gitbook/assets/dinosaur.gif
 ---
 
 Make Skyra site have a GitBook look!
