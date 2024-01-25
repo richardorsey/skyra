@@ -188,29 +188,29 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
 
         // Create buttons in toolbar
         BUTTON_ID = gitbook.toolbar.createButton({
-            icon: 'fa fa-font',
-            label: 'Font Settings',
-            className: 'font-settings',
+            icon: 'fa fa-eye',
+            label: 'Theme Settings',
+            className: 'theme-settings',
             dropdown: [
-                [
-                    {
-                        text: 'A',
-                        className: 'font-reduce',
-                        onClick: reduceFontSize
-                    },
-                    {
-                        text: 'A',
-                        className: 'font-enlarge',
-                        onClick: enlargeFontSize
-                    }
-                ],
-                $.map(FAMILIES, function(family) {
-                    family.onClick = function(e) {
-                        return changeFontFamily(family.config, e);
-                    };
+                // [
+                //     {
+                //         text: 'A',
+                //         className: 'font-reduce',
+                //         onClick: reduceFontSize
+                //     },
+                //     {
+                //         text: 'A',
+                //         className: 'font-enlarge',
+                //         onClick: enlargeFontSize
+                //     }
+                // ],
+                // $.map(FAMILIES, function(family) {
+                //     family.onClick = function(e) {
+                //         return changeFontFamily(family.config, e);
+                //     };
 
-                    return family;
-                }),
+                //     return family;
+                // }),
                 $.map(THEMES, function(theme) {
                     theme.onClick = function(e) {
                         return changeColorTheme(theme.config, e);
