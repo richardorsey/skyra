@@ -789,7 +789,7 @@ table {
 	content: "\f054"
 }
 
-.fa-moon:before {
+.fa-moon::before {
 	content: "";
 	display: block;
 	position: relative;
@@ -801,17 +801,17 @@ table {
 	mask: url(images/icons/icon-moon.svg) no-repeat center / contain;
 	transition: all 0.3s ease 0s;
 }
-.fa-moon:before:hover {
+.fa-moon:hover::before {
 	
 	background-color: #000;
 
 }
 
-.book.color-theme-2.fa-moon:before{
+.book.color-theme-2 .fa-moon::before{
 	background-color: #3b3f54;
 }
 
-.book.color-theme-2.fa-moon:before:hover {
+.book.color-theme-2 .fa-moon:hover::before {
 	background-color: #FFF;
 }
 
