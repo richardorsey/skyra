@@ -1,10 +1,10 @@
 ---
 layout: home
-title: Jekyll Gitbook Them
+title: Testing Skyra Theme
 permalink: /
 ---
 
-Make Jelly site have a GitBook look!
+Make Skyra site have a GitBook look!
 
 ## Demo
 
