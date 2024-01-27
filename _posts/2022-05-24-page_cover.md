@@ -12,7 +12,7 @@ a `cover` field to the page metadata:
 
 ```diff
   ---
-  title: Page with cover image
+  title: Welcome to Skyra
   author: Tao He
   date: 2022-05-24
   category: Jekyll
