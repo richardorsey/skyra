@@ -1,5 +1,5 @@
 ---
-title: Page with cover image
+title: Welcome to Skyra
 author: Tao He
 date: 2022-05-24
 category: Jekyll
@@ -12,7 +12,7 @@ a `cover` field to the page metadata:
 
 ```diff
   ---
-  title: Welcome to Skyra
+  title: Page with cover image
   author: Tao He
   date: 2022-05-24
   category: Jekyll
