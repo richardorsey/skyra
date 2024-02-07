@@ -5,11 +5,12 @@
     overflow-y: scroll;
 }
 
-.book-body .book-header {
+ .book-header {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 100;
 }
 
 .book.with-summary .book-body .book-header {
