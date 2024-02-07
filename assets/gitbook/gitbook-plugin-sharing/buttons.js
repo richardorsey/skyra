@@ -92,26 +92,26 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         }
 
         // Direct actions to share
-        $.each(SITES, function(sideId, site) {
-            if (!opts[sideId]) return;
+        // $.each(SITES, function(sideId, site) {
+        //     if (!opts[sideId]) return;
 
-            var onClick = site.onClick;
+        //     var onClick = site.onClick;
             
-            // override target link with provided link
-            var side_link = opts[`${sideId}_link`]
-            if (side_link !== undefined && side_link !== "") {
-                onClick = function(e) {
-                    e.preventDefault();
-                    window.open(side_link);
-                }
-            }
+        //     // override target link with provided link
+        //     var side_link = opts[`${sideId}_link`]
+        //     if (side_link !== undefined && side_link !== "") {
+        //         onClick = function(e) {
+        //             e.preventDefault();
+        //             window.open(side_link);
+        //         }
+        //     }
 
-            gitbook.toolbar.createButton({
-                icon: site.icon,
-                label: site.text,
-                position: 'right',
-                onClick: onClick
-            });
-        });
+        //     gitbook.toolbar.createButton({
+        //         icon: site.icon,
+        //         label: site.text,
+        //         position: 'right',
+        //         onClick: onClick
+        //     });
+        // });
     });
 });
