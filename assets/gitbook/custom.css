@@ -47,10 +47,10 @@
         width: calc(50% - 3px);
     }
 
-    .book.with-summary .book-body .book-header {
+    /* .book.with-summary .book-body .book-header {
         overflow-x: hidden;
         overflow-y: hidden;
-    }
+    } */
 }
 
 .book .book-body .book-header {
