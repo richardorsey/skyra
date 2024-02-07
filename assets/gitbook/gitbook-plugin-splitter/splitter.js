@@ -92,8 +92,8 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 			}
 			event.stopPropagation();
 			event.preventDefault();
-			$summary.outerWidth(event.pageX + grabPointWidth);
-			$bookBody.offset({ right: event.pageX + grabPointWidth });
+			$summary.outerWidth(event.pageX - grabPointWidth);
+			$bookBody.offset({ right: event.pageX - grabPointWidth });
 		});
 
 		function getSplitState() {
