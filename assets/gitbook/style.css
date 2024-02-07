@@ -3414,7 +3414,7 @@ table {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	position: absolute;
 	top: 0;
-	left: -300px;
+	right: -300px;
 	bottom: 0;
 	z-index: 1;
 	overflow-y: auto;
@@ -3514,7 +3514,7 @@ table {
 }
 
 .book.with-summary .book-summary {
-	left: 0
+	right: 0
 }
 
 .book.without-animation .book-summary {
