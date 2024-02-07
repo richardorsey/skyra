@@ -22,12 +22,15 @@
             <div class="book-body">
                 <div class="book-header" role="navigation">
                     <!-- Title -->
+                    <div style="display: inline-block; margin-left: 10px;" class="logo">
+                        <img src="/skyra/assets/gitbook/images/logo.png" alt="logo">
+                    </div>
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         {% if page.title %}
-                            <a href="." >{{ page.title | escape }}</a>
+                            <a href="." ></a>
                         {% else %}
-                            <a href="." >{{ site.title | escape }}</a>
+                            <a href="." ></a>
                         {% endif %}
                     </h1>
                 </div>
