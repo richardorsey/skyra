@@ -3519,12 +3519,12 @@ table {
 
 .nav-header{
 	display: flex;
-	justify-content: space-between;
-	gap: 30px;
+	flex-direction: column;
+	gap: 20px;
 	padding: 10px 15px 10px 30px;
 }
-.nav-header .logo{
-	max-width: 150px;
+ .logo{
+	max-width: 100px;
 	
 }
 
