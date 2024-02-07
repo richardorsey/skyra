@@ -81,8 +81,8 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 			isDraggable = false;
 			saveSplitState(
 				$summary.outerWidth(),
-				$summary.position().left,
-				$bookBody.position().left
+				$summary.position().right,
+				$bookBody.position().right
 			);
 		});
 
@@ -93,15 +93,15 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 			event.stopPropagation();
 			event.preventDefault();
 			$summary.outerWidth(event.pageX + grabPointWidth);
-			$bookBody.offset({ left: event.pageX + grabPointWidth });
+			$bookBody.offset({ right: event.pageX + grabPointWidth });
 		});
 
 		function getSplitState() {
 			var splitState = JSON.parse(sessionStorage.getItem(KEY_SPLIT_STATE));
 			splitState || (splitState = {});
 			splitState.summaryWidth || (splitState.summaryWidth = $summary.outerWidth());
-			splitState.summaryOffset || (splitState.summaryOffset = $summary.position().left);
-			splitState.bookBodyOffset || (splitState.bookBodyOffset = $bookBody.position().left);
+			splitState.summaryOffset || (splitState.summaryOffset = $summary.position().right);
+			splitState.bookBodyOffset || (splitState.bookBodyOffset = $bookBody.position().right);
 			return splitState;
 		}
 
@@ -115,8 +115,8 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 
 		function setSplitState(summaryWidth, summaryOffset, bookBodyOffset) {
 			$summary.outerWidth(summaryWidth);
-			$summary.offset({ left: summaryOffset });
-			$bookBody.offset({ left: bookBodyOffset });
+			$summary.offset({ right: summaryOffset });
+			$bookBody.offset({ right: bookBodyOffset });
 			// improved broken layout in windows chrome.
 			//   "$(x).offset" automatically add to "position:relative".
 			//   but it cause layout broken..
