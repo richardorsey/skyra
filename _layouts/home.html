@@ -14,25 +14,25 @@
        
         <div class="book">
 
-            <div class="book-header" role="navigation">
-                <div style="display: inline-block; margin-left: 10px;" class="logo">
-                    <img src="/skyra/assets/gitbook/images/logo.png" alt="logo">
-                </div>
-                <!-- Title -->
-                <h1>
-                    <i class="fa fa-circle-o-notch fa-spin"></i>
-                    {% if page.title %}
-                    <a href="."></a>
-                    {% else %}
-                    <a href="."></a>
-                    {% endif %}
-                </h1>
-            </div>
+            
 
             {%- include toc-date.html -%}
 
             <div class="book-body">
-                
+                <div class="book-header" role="navigation">
+                    <div style="display: inline-block; margin-left: 10px;" class="logo">
+                        <img src="/skyra/assets/gitbook/images/logo.png" alt="logo">
+                    </div>
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        {% if page.title %}
+                        <a href="."></a>
+                        {% else %}
+                        <a href="."></a>
+                        {% endif %}
+                    </h1>
+                </div>
                 <div class="body-inner">
                     {%- include body.html -%}
 
