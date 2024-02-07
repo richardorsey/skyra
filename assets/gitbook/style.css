@@ -3213,7 +3213,8 @@ table {
 	z-index: 2;
 	font-size: .85em;
 	color: #7e888b;
-	background: 0 0
+	background: 0 0;
+	overflow: hidden;
 }
 
 .book-header .btn {
