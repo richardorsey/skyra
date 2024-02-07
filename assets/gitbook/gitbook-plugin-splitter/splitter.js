@@ -73,7 +73,7 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 		$divider.on('mousedown', function (event) {
 			event.stopPropagation();
 			isDraggable = true;
-			grabPointWidth = $summary.outerWidth() - event.pageX;
+			grabPointWidth = $summary.outerWidth() + event.pageX;
 		});
 
 		$body.on('mouseup', function (event) {
