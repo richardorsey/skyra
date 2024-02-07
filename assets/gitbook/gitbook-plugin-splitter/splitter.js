@@ -73,7 +73,7 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 		$divider.on('mousedown', function (event) {
 			event.stopPropagation();
 			isDraggable = true;
-			grabPointWidth = $summary.outerWidth() + event.pageX;
+			grabPointWidth = $summary.outerWidth() - event.pageX;
 		});
 
 		$body.on('mouseup', function (event) {
@@ -81,8 +81,8 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 			isDraggable = false;
 			saveSplitState(
 				$summary.outerWidth(),
-				$summary.position().right,
-				$bookBody.position().right
+				$summary.position().left,
+				$bookBody.position().left
 			);
 		});
 
@@ -92,16 +92,16 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 			}
 			event.stopPropagation();
 			event.preventDefault();
-			$summary.outerWidth(event.pageX - grabPointWidth);
-			$bookBody.offset({ right: event.pageX - grabPointWidth });
+			$summary.outerWidth(event.pageX + grabPointWidth);
+			$bookBody.offset({ left: event.pageX + grabPointWidth });
 		});
 
 		function getSplitState() {
 			var splitState = JSON.parse(sessionStorage.getItem(KEY_SPLIT_STATE));
 			splitState || (splitState = {});
 			splitState.summaryWidth || (splitState.summaryWidth = $summary.outerWidth());
-			splitState.summaryOffset || (splitState.summaryOffset = $summary.position().right);
-			splitState.bookBodyOffset || (splitState.bookBodyOffset = $bookBody.position().right);
+			splitState.summaryOffset || (splitState.summaryOffset = $summary.position().left);
+			splitState.bookBodyOffset || (splitState.bookBodyOffset = $bookBody.position().left);
 			return splitState;
 		}
 
@@ -115,8 +115,8 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 
 		function setSplitState(summaryWidth, summaryOffset, bookBodyOffset) {
 			$summary.outerWidth(summaryWidth);
-			$summary.offset({ right: summaryOffset });
-			$bookBody.offset({ right: bookBodyOffset });
+			$summary.offset({ left: summaryOffset });
+			$bookBody.offset({ left: bookBodyOffset });
 			// improved broken layout in windows chrome.
 			//   "$(x).offset" automatically add to "position:relative".
 			//   but it cause layout broken..
