@@ -3413,7 +3413,7 @@ table {
 .book-summary {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	position: absolute;
-	top: 0;
+	top: 50px;
 	left: -300px;
 	bottom: 0;
 	z-index: 1;
