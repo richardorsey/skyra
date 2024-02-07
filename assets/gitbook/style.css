@@ -3517,6 +3517,22 @@ table {
 	left: 0
 }
 
+.nav-header{
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	padding: 10px 15px 10px 30px;
+}
+.nav-header .logo{
+	max-width: 150px;
+	
+}
+
+.nav-header .logo img{
+	max-width: 100%;
+
+}
+
 .book.without-animation .book-summary {
 	-webkit-transition: none !important;
 	-moz-transition: none !important;
