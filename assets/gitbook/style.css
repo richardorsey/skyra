@@ -3559,13 +3559,13 @@ table {
 		overflow: hidden
 	}
 
-	.book.with-summary .book-body {
+	/* .book.with-summary .book-body {
 		-webkit-transform: translate(calc(100% - 60px), 0);
 		-moz-transform: translate(calc(100% - 60px), 0);
 		-ms-transform: translate(calc(100% - 60px), 0);
 		-o-transform: translate(calc(100% - 60px), 0);
 		transform: translate(calc(100% - 60px), 0)
-	}
+	} */
 }
 
 .book.without-animation .book-body {
@@ -3987,13 +3987,6 @@ table {
 	left: 0
 }
 
-.bottom {
-
-	
-}
-.bottom__columns{}
-.bottom__column{}
-.bottom__label{}
 
 @media (max-width:1240px) {
 	.navigation {
