@@ -3414,7 +3414,7 @@ table {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	position: absolute;
 	top: 0;
-	right: -300px;
+	right: 100%;
 	bottom: 0;
 	z-index: 1;
 	overflow-y: auto;
@@ -3532,7 +3532,7 @@ table {
 
 @media (min-width:600px) {
 	.book.with-summary .book-body {
-		left: 300px
+		right: 300px
 	}
 }
 
