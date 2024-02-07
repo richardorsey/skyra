@@ -1,62 +1,77 @@
 <!DOCTYPE HTML>
-<html lang="en" >
-    <head>
+<html lang="en">
 
-        {%- include head.html -%}
+<head>
 
-        {% assign reversed_posts = site.posts | reverse %}
+    {%- include head.html -%}
 
-        {% if reversed_posts %}
-            <link rel="next" href="{{site.baseurl}}{{reversed_posts.first.url}}" />
-        {% endif %}
-    </head>
-    <body>
-       
-        <div class="book">
+    {% assign reversed_posts = site.posts | reverse %}
 
-            
+    {% if reversed_posts %}
+    <link rel="next" href="{{site.baseurl}}{{reversed_posts.first.url}}" />
+    {% endif %}
+</head>
 
-            {%- include toc-date.html -%}
+<body>
 
-            <div class="book-body">
-                <div class="book-header" role="navigation">
-                    <div style="display: inline-block;" class="logo">
-                        <img src="/skyra/assets/gitbook/images/logo.png" alt="logo">
-                    </div>
-                    <!-- Title -->
-                    <h1>
-                        <i class="fa fa-circle-o-notch fa-spin"></i>
-                        {% if page.title %}
-                        <a href="."></a>
-                        {% else %}
-                        <a href="."></a>
-                        {% endif %}
-                    </h1>
+    <div class="book">
+
+
+
+        {%- include toc-date.html -%}
+
+        <div class="book-body">
+            <div class="book-header" role="navigation">
+                <div style="display: inline-block;" class="logo">
+                    <img src="/skyra/assets/gitbook/images/logo.png" alt="logo">
                 </div>
-                <div class="body-inner">
-                    {%- include body.html -%}
-
-                    <a href="{{site.baseurl}}/" class="navigation navigation-pre navigation-unique">
-                        <i class="fa"></i>
-                    </a>
-
-                    {% if reversed_posts %}
-                        <a href="{{site.baseurl}}{{reversed_posts.first.url}}" class="navigation navigation-next navigation-unique" aria-label="Next page: {{reversed_posts.first.title}}">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
+                <!-- Title -->
+                <h1>
+                    <i class="fa fa-circle-o-notch fa-spin"></i>
+                    {% if page.title %}
+                    <a href="."></a>
+                    {% else %}
+                    <a href="."></a>
                     {% endif %}
+                </h1>
+            </div>
+            <div class="body-inner">
+                {%- include body.html -%}
+
+                <a href="{{site.baseurl}}/" class="navigation navigation-pre navigation-unique">
+                    <i class="fa"></i>
+                </a>
+
+                {% if reversed_posts %}
+                <a href="{{site.baseurl}}{{reversed_posts.first.url}}"
+                    class="navigation navigation-next navigation-unique"
+                    aria-label="Next page: {{reversed_posts.first.title}}">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                {% endif %}
+            </div>
+            <div class="bottom">
+                <div class="bottom__columns">
+                    <div class="bottom__column">
+                        <div class="bottom__label">Previous</div>
+                    </div>
+                    <div class="bottom__column">
+                        <div class="bottom__label">Next</div>
+                    </div>
                 </div>
             </div>
-
-            <script>
-            var gitbook = gitbook || [];
-            gitbook.push(function() {
-                gitbook.page.hasChanged({%- include metadata-home.json.tpl -%});
-            });
-            </script>
         </div>
 
-        {%- include footer.html -%}
+        <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function () {
+                gitbook.page.hasChanged({% - include metadata - home.json.tpl -%});
+            });
+        </script>
+    </div>
 
-    </body>
+    {%- include bottom.html -%}
+
+</body>
+
 </html>

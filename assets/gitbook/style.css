@@ -3987,6 +3987,14 @@ table {
 	left: 0
 }
 
+.bottom {
+
+	
+}
+.bottom__columns{}
+.bottom__column{}
+.bottom__label{}
+
 @media (max-width:1240px) {
 	.navigation {
 		position: static;
