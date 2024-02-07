@@ -3566,6 +3566,9 @@ table {
 		-o-transform: translate(calc(100% - 60px), 0);
 		transform: translate(calc(100% - 60px), 0)
 	} */
+	.book.with-summary .book-body {
+		left: 0!important;
+	}
 }
 
 .book.without-animation .book-body {
